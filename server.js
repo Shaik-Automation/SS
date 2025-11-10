@@ -13,14 +13,14 @@ app.post("/sendMail", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "arbashussain69@gmail.com", // ✅ your Gmail
-        pass: "cjmpxknylkaoneqh", // ✅ Google App Password (16-char)
+        user: "", // ✅ your Gmail
+        pass: "", // ✅ Google App Password (16-char)
       },
     });
 
     const mailOptions = {
-      from: "StudySnap <arbashussain69@gmail.com>",
-      to: "arbashussain69@gmail.com", // ✅ the receiver (your real Gmail)
+      from: "StudySnap <>",
+      to: "", // ✅ the receiver (your real Gmail)
       subject: "New StudySnap Interest",
       text: `New user interested!\n\nEmail: ${email}\nReason: ${reason}`,
     };
@@ -34,3 +34,4 @@ app.post("/sendMail", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("Mailer server running on port 3000"));
+
