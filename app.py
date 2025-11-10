@@ -5,7 +5,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-NODEMAILER_URL = "http://localhost:3000/sendMail"  # Node.js mailer endpoint
+NODEMAILER_URL = "https://ss-git-main-goditachiuchiha96-1262s-projects.vercel.app"  # Node.js mailer endpoint
 
 @app.route("/submit", methods=["POST"])
 def submit():
@@ -27,3 +27,4 @@ def submit():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
