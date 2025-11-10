@@ -8,7 +8,8 @@ document
     const responseMsg = document.getElementById("responseMsg");
 
     try {
-      const res = await fetch("http://localhost:5000/submit", {
+      const res = await fetch("https://ss-git-main-goditachiuchiha96-1262s-projects.vercel.app", {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, reason }),
@@ -20,3 +21,4 @@ document
       responseMsg.textContent = "Something went wrong. Try again later.";
     }
   });
+
